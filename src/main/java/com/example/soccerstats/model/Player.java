@@ -1,22 +1,30 @@
 package com.example.soccerstats.model;
 
 
+import javax.persistence.*;
 
-
+@Entity
+@Table(name = "players")
 public class Player {
 
-
+    @Id
+    @Column
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-
+    @Column
     private String playerName;
 
+    @Column
     private String position;
 
+    @Column
     private Integer goalsScored;
 
+    @Column
     private Integer assists;
 
+    @Column
     private Integer cleanSheets;
 
     public Player() {
