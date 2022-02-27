@@ -4,10 +4,9 @@ package com.example.soccerstats.Controller;
 import com.example.soccerstats.model.Player;
 import com.example.soccerstats.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.Optional;
 
 @RestController
 @RequestMapping(path = "/api")
@@ -21,5 +20,10 @@ public class PlayerController {
     @PostMapping("/players")
     public Player createPlayer(@RequestBody Player playerObject){
         return playerService.createPlayer(playerObject);
+    }
+
+    @GetMapping("/players/{playerId}/")
+    public Optional<Player> getPlayer(@PathVariable(value = "playerId") Long playerId){
+        return playerService.getPlayer(playerId);
     }
 }
