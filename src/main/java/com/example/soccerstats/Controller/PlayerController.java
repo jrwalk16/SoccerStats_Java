@@ -6,6 +6,7 @@ import com.example.soccerstats.service.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -25,5 +26,10 @@ public class PlayerController {
     @GetMapping("/players/{playerId}/")
     public Optional<Player> getPlayer(@PathVariable(value = "playerId") Long playerId){
         return playerService.getPlayer(playerId);
+    }
+
+    @GetMapping("/players")
+    public List<Player> getAllPlayers(){
+        return playerService.getAllPlayers();
     }
 }

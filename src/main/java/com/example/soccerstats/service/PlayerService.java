@@ -7,6 +7,7 @@ import com.example.soccerstats.repository.PlayerRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -37,4 +38,9 @@ public class PlayerService {
             throw new InformationNotFoundException("player with id " + playerId + " not found");
         }
     }
+
+    public List<Player> getAllPlayers(){
+        return playerRepository.findAll();
+    }
+
 }
