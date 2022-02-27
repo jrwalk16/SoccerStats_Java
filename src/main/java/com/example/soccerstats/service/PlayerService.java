@@ -43,4 +43,19 @@ public class PlayerService {
         return playerRepository.findAll();
     }
 
+
+    public Player updatePlayer(Long playerId, Player playerObject){
+        Optional<Player> player = playerRepository.findById(playerId);
+        if(player.isPresent()){
+            Player updatePlayer = playerRepository.findById(playerId).get();
+            updatePlayer.setPlayerName(playerObject.getPlayerName());
+            updatePlayer.setGoalsScored(playerObject.getGoalsScored());
+            updatePlayer.setAssists(playerObject.getAssists());
+            updatePlayer.setPosition(playerObject.getPosition());
+            updatePlayer.setCleanSheets(playerObject.getCleanSheets());
+            return playerRepository.save(updatePlayer);
+        } else {
+            throw new InformationNotFoundException("player with id " + playerId + " not found");
+        }
+    }
 }

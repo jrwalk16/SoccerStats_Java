@@ -32,4 +32,9 @@ public class PlayerController {
     public List<Player> getAllPlayers(){
         return playerService.getAllPlayers();
     }
+
+    @PutMapping("/players/{playerId}/")
+    public Player updatePlayer(@PathVariable(value = "playerId") Long playerId, @RequestBody Player playerObject){
+        return playerService.updatePlayer(playerId, playerObject);
+    }
 }
