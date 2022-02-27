@@ -24,6 +24,17 @@ public class Team {
     @Column
     private String teamCountry;
 
+    @OneToOne
+    private Player player;
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
     public Team() {
     }
 
