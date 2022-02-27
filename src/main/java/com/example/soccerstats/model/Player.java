@@ -2,6 +2,7 @@ package com.example.soccerstats.model;
 
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "players")
@@ -85,5 +86,12 @@ public class Player {
 
     public void setCleanSheets(Integer cleanSheets) {
         this.cleanSheets = cleanSheets;
+    }
+
+    @OneToMany
+    private List<Team> teamList;
+
+    public List<Team> getTeamList() {
+        return teamList;
     }
 }

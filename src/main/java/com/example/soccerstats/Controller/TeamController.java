@@ -7,6 +7,8 @@ import com.example.soccerstats.service.TeamService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping(path = "/api")
 public class TeamController {
@@ -28,5 +30,10 @@ public class TeamController {
     @PostMapping("/players/{playerId}/teams/")
     public Team createTeam(@PathVariable(value = "playerId") Long playerId, @RequestBody Team teamObject) {
         return teamService.createTeam(playerId, teamObject);
+    }
+
+    @GetMapping("/players/{playerId}/teams/")
+    public List<Team> getAllTeams(@PathVariable(value = "playerId")Long playerId){
+        return teamService.getAllTeams(playerId);
     }
 }

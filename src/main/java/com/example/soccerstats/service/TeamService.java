@@ -10,6 +10,7 @@ import com.example.soccerstats.repository.TeamRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
 
 @Service
@@ -43,4 +44,12 @@ public class TeamService {
         return teamRepository.save(teamObject);
     }
 
+    public List<Team> getAllTeams(Long playerId) {
+        Optional<Player> player = playerRepository.findById(playerId);
+        if(player.isPresent()){
+            return player.get().getTeamList();
+        } else {
+            throw new InformationNotFoundException("player with id " + playerId + " does not exist");
+        }
+    }
 }
