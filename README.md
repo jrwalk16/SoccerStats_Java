@@ -1,3 +1,5 @@
+# Capstone-Project Backend
+
 ### Product Description
 This backend application will include CRUD functionality within a Spring Boot Rest API to search for players and see their corresponding statistics. 
 
@@ -14,13 +16,14 @@ I wanted to create a backend application that allows a user to create, update an
 
 ### Issues Encountered
 1. Had issues properly connecting my github link to heroku to deploy the project. Issues appeared to be related to the version of Java to build the application. In the future during my planning stage I will do more research about the compatability between my intended project and hosting platform/software.
-2. 
+
 
 ### User Stories
 
 * As a user, I want to be able to add a player to the database.
 * As a user, I want to be able to update a players statistics.
 * As a user, I want to be able to add a team to a players information.
+* As a user, I want to be able to return one or all players.
 
 
 
