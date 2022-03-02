@@ -7,7 +7,9 @@ Link to front-end connected project https://github.com/jrwalk16/Soccer_FrontEnd
 
 ### Process
 
-I wanted to create a backend application that allows a user to create, update and retrieve information about soccer players and teams. The application does not have a delete functionality since a player or team does not stop existing once they have been entered in the database.
+I wanted to create a backend application that allows a user to create, update and retrieve information about soccer players and teams. The application does not have a delete functionality since a player or team does not stop existing once they have been entered in the database. My inspiration for the database was basketball reference which I provided a link below.
+
+https://www.basketball-reference.com/
 
 ### Things to add in the future
 
