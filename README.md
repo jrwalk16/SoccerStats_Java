@@ -12,6 +12,7 @@ I wanted to create a backend application that allows a user to create, update an
 ### Things to add in the future
 
 1. Functionality to integrate the tables in a more complex way that allows the user to track a players stats by team. So a front end user could see all the goals/assists a player has with team 1 & team 2.
+2. Attach an image to the player model so their headshot comes up upon search.
 
 
 ### Issues Encountered
