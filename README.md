@@ -42,10 +42,6 @@ I wanted to create a backend application that allows a user to create, update an
 | GET /api/players/{playerId}/teams/{teamId}             | GET a team by ID
 | GET /api/players/{playerId}/teams/                      | GET all teams for a player
 
-### POM Dependencies
-
-
- 
 
 ### Tools Used
 
@@ -53,6 +49,65 @@ I wanted to create a backend application that allows a user to create, update an
 ![postgres logo](https://user-images.githubusercontent.com/77462898/152444380-ffb0ab5c-6a19-4c2a-830c-be25c418d370.png)
 ![SpringBoot](https://user-images.githubusercontent.com/77462898/152444031-3b6663aa-3610-48a2-bae1-9564dc10e471.png)
 ![intelliJ logo](https://media.git.generalassemb.ly/user/40878/files/8cd52480-851c-11ec-9421-b7c2fbc16551)
+
+
+### POM Dependencies
+
+```Java
+  <dependencies>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-tomcat</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-entitymanager</artifactId>
+        <version>6.0.0.Alpha7</version>
+        <type>pom</type>
+    </dependency>
+    <dependency>
+        <groupId>org.hibernate</groupId>
+        <artifactId>hibernate-core</artifactId>
+        <version>6.0.0.CR1</version>
+        <type>pom</type>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-web</artifactId>
+        <version>2.6.3</version>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-devtools</artifactId>
+        <scope>runtime</scope>
+        <optional>true</optional>
+    </dependency>
+    <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-data-jpa</artifactId>
+    </dependency>
+    <dependency>
+        <groupId>org.postgresql</groupId>
+        <artifactId>postgresql</artifactId>
+        <scope>runtime</scope>
+    </dependency>
+        <dependency>
+            <groupId>javax.xml.bind</groupId>
+            <artifactId>jaxb-api</artifactId>
+            <version>2.4.0-b180830.0359</version>
+        </dependency>
+        <dependency>
+        ```
+
+
+ 
+
+
+
 
 
 
