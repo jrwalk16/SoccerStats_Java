@@ -3,6 +3,8 @@
 # Product Description
 This backend application will include CRUD functionality within a Spring Boot Rest API to search for players and see their corresponding statistics. 
 
+Link to front-end connected project https://github.com/jrwalk16/Soccer_FrontEnd
+
 
 # User Stories
 
